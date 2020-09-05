@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block head%}
+<title>Upload Product</title>
+<link rel="stylesheet" type="text/css" href="./css/main.css" />
+{% endblock %} {% block body %}
+<nav class="navbar">
+  <a class="navbar-link" href="./loadProducts.html"></a>
+</nav>
+<div class="d-flex justify-content-center">
+  <form method="POST" id="form">
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="productName"
+        name="productName"
+        aria-describedby="emailHelp"
+      />
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <label for="productImage">Product Image</label>
+      <input
+        type="file"
+        class="form-control-file"
+        id="productImage"
+        name="productImage"
+      />
+    </div>
+    <div class="form-group">
+      <label for="productDesc">Product Description</label>
+      <textarea
+        class="form-control"
+        name="productDesc"
+        id="productDesc"
+        rows="3"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="productPrice">Product Price</label>
+      <input
+        type="number"
+        class="form-control-file"
+        id="productPrice"
+        name="productPrice"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<script type="text/javascript" src="./js/index.js"></script>
+{%endblock%}
